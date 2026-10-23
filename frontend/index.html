@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Phishing Detection & Response Agent | SOA Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar"><div><strong>AI Phishing Detection &amp; Response Agent</strong><span class="subbrand">Service-Oriented Architecture Project</span></div><span class="project-tag">SOA PROJECT</span></nav>
+<main class="page">
+  <section class="intro"><p class="eyebrow">URL SECURITY CHECK</p><h1>Check a website link</h1><p>Enter a URL to check for suspicious signs. Separate services inspect the link, assess its risk, and suggest a response.</p></section>
+  <section class="service-panel"><div class="section-heading"><div><h2>Service status</h2><p>These services work together to process each request.</p></div><button id="refreshStatus" class="secondary-button" type="button">Refresh status</button></div>
+    <div id="serviceStatus" class="service-grid"><div class="service-card"><span class="status-dot"></span><strong>Detection Service</strong><small>Checking status…</small></div><div class="service-card"><span class="status-dot"></span><strong>Risk Analysis Service</strong><small>Checking status…</small></div><div class="service-card"><span class="status-dot"></span><strong>Response Service</strong><small>Checking status…</small></div></div><p id="serviceStatusMessage" class="small-note"></p>
+  </section>
+  <section class="check-panel"><h2>Analyze a URL</h2><p>Paste the full website address below.</p><form id="analyzeForm"><label for="urlInput">Website URL</label><div class="input-row"><input id="urlInput" type="text" placeholder="https://example.com" autocomplete="url" required><button id="analyzeBtn" type="submit">Analyze URL</button></div></form><p id="status" role="status" class="small-note"></p></section>
+  <section id="results" class="results hidden" aria-live="polite"><div class="result-top"><div><p class="eyebrow">ANALYSIS REPORT</p><h2 id="prediction">—</h2><p id="checkedUrl" class="checked-url"></p></div><div id="riskBadge" class="risk-badge">— risk</div></div>
+    <div class="score-section"><div class="score-label"><span>Risk score</span><strong id="score">0/100</strong></div><div class="meter"><div id="meterFill"></div></div></div>
+    <div class="result-grid"><article class="result-card"><p class="step-label">SERVICE 01</p><h3>Detection Service</h3><p>Checks URL characteristics and lists the indicators it found.</p><ul id="reasons"></ul></article><article class="result-card"><p class="step-label">SERVICE 02</p><h3>Risk Analysis Service</h3><p id="riskSummary">The service calculates a risk score from the detected indicators.</p></article><article class="result-card"><p class="step-label">SERVICE 03</p><h3>Response Service</h3><p><strong id="action">—</strong></p><p id="responseMessage"></p><small id="simulated"></small></article></div><p id="note" class="small-note"></p>
+  </section>
+  <footer><strong>SOA Project</strong><span>AI-Based Phishing Detection &amp; Response Agent</span><p>Educational prototype. A low risk score does not guarantee that a website is safe.</p></footer>
+</main><script src="app.js"></script>
+</body></html>
